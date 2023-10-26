@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<meta charset='utf8'>
+		
+		<link href="{{ url_for('static',filename='css/foods.css') }}" rel='stylesheet'>
+		
+		
+	</head>
+	
+	<body>
+	
+		<div id='banner'>
+		</div>
+		
+		<div id='menu'>
+
+			<ul>
+				<li><a href="/">首頁</a></li>
+				<li><a href="/news">新聞</a></li>
+				<li><a href="/foods">美食</a></li>
+				<li><a href="/product">產品</a></li>
+				
+			</ul>
+		
+			
+		
+		</div>
+		
+		<div id='content'>
+		
+			{% for row in result %}
+			
+				<div class='foodsArea'>
+					<a href="{{row[3]}}"><p>{{row[1]}}</p></a>
+					<br>
+					<img src="{{row[2]}}">
+					<br>
+				</div>
+			
+			{% endfor %}
+		
+		
+		
+		
+		</div>
+		
+		
+		<div id='footer'>
+		</div>
+
+	
+	</body>
+
+
+</html>
