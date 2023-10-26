@@ -1,0 +1,61 @@
+<html>
+   <head>
+		<meta charset='utf-8'>
+		<link href = "{{ url_for('static',filename='css/foods.css') }}" rel='stylesheet'>
+		
+   
+   </head>
+   
+  
+   <body>
+		<div id = 'banner'>
+		</div>
+		
+		<div id = 'menu'>
+		
+		<ul>
+			<li><a href="/">首頁</a></li>
+			<li><a href="/foods">foods</a></li>
+			<li><a href="/news">news</a></li>
+			<li><a href="/product">product</a></li>
+		</ul>
+		
+		</div>
+		
+		
+		<div id = 'content'>
+		
+		<p>Pchome</p>
+		
+		{% for row in res %}
+			<div class='foodsArea'>
+			<a href="{{row[4]}}"><p>{{row[2]}}</p></a>
+			<img src={{row[3]}}>
+			<br>
+			</div>
+		{% endfor %}
+		
+		<div style="clear:both"></div>
+		<hr>		
+		<p>Yahoo</p>
+
+		{% for row in res2 %}
+			<div class='foodsArea'>
+			<a href="{{row[4]}}"><p>{{row[2]}}</p></a>
+			<img src={{row[3]}}>
+			<br>
+			</div>
+		{% endfor %}
+		
+		
+		
+		
+		</div>
+		
+		<div id = 'footer'>
+		</div>
+		
+		
+   </body>
+
+</html>

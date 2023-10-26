@@ -1,0 +1,11 @@
+pip install  virtualenvwrapper-win
+
+
+
+mkvirtualenv  myflask
+
+
+
+deactivate  退出
+
+workon
